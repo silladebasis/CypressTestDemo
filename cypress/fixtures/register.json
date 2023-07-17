@@ -1,0 +1,12 @@
+{
+    "name":{
+        "firstName":"Rahul",
+        "lastName":"Khanna"
+    },
+    "email":"rahul@test5678.com",
+    "telephone":"7896541230",
+    "login":{
+        "password":"Cypress123",
+        "confirmPassword":"Cypress123"
+    }
+}
