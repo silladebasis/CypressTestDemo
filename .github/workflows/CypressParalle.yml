@@ -1,0 +1,22 @@
+name: Cypress Parallel Tests
+
+on: push
+jobs: 
+  cypress-run:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        containers: [1, 2, 3]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      -  name: Cypress run
+         uses: cypress-io/github-action@v5
+         with:
+          record: true
+          parallel: true
+          group: 'Actions example'
+         env:
+          # pass the Cypress Cloud record key as an environment variable
+          CYPRESS_RECORD_KEY: 9f804519-e387-4747-8c49-55b99eb852a0
+      
